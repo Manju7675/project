@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('MY_SECRET_KEY')  # Consider using your secret key
+SECRET_KEY = ('vc_#!)n0+67%b@lit$3_(45lx!vi#rm^5^)9bowamn$o8z0+k9')  # Consider using your secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,21 +86,18 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'student_management_db',
+        'USER':'root',
+        'PASSWORD':'7675910036@',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'django',
-    #     'USER': os.environ.get('DB_USER'),
-    #     'PASSWORD': os.environ.get('DB_PASS'),
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3307'
-    # }
 }
+    
+
 
 
 # Password validation
